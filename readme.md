@@ -30,7 +30,7 @@ Results-driven C++ developer with **8 years** of professional experience buildin
 ### Gunswinger – 3D Game & Custom Game Engine  
 *Personal Project – C++*
 
-- Independently designed and implemented a complete 3D game engine and game from scratch in modern C++.
+- Independently designed and implemented a complete 3D game engine and game from scratch in C++.
 - Built rendering pipeline using **OpenGL** with **GLFW** for window and input management; integrated **miniaudio** for audio playback.
 - Implemented physically based material workflow, multithreaded procedural mesh generation, and optimizations for high-frequency monitors (120Hz+).
 - Codebase available upon request (private repository).
