@@ -1,15 +1,13 @@
 \documentclass[11pt,a4paper]{article}
-\usepackage[margin=0.75in]{geometry}
+\usepackage[margin=0.8in]{geometry}
 \usepackage{hyperref}
 \usepackage{fontspec}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{xcolor}
 
-% Modern fonts (requires XeLaTeX or LuaLaTeX)
-\setmainfont{Lato} % or use Arial, Helvetica, or TeX Gyre Heros if Lato not available
+\setmainfont{Lato}   % Change to Arial or TeX Gyre Heros if Lato is not installed
 
-% Colors
 \definecolor{accent}{HTML}{2C3E50}
 \definecolor{linkcolor}{HTML}{2980B9}
 
@@ -20,84 +18,78 @@
     pdfborder={0 0 0}
 }
 
-% Section formatting
 \titleformat{\section}{\Large\bfseries\color{accent}}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{6pt}
+\titlespacing{\section}{0pt}{12pt}{8pt}
 
-% Custom commands for entries
 \newcommand{\entry}[4]{
     \textbf{#1} \hfill #2 \\
     \textit{#3} \hfill #4 \\
-    \vspace{2pt}
-}
-
-\newcommand{\bulletitem}[1]{
-    \item #1
+    \vspace{4pt}
 }
 
 \begin{document}
 
 % Header
 \begin{center}
-    {\Huge\bfseries James Casebeer} \\[4pt]
-    \small Richmond, VA \quad | \quad Remote Available \quad | \quad \textbf{Open to relocation for the right opportunity} \\[4pt]
+    {\Huge\bfseries James Casebeer} \\[6pt]
+    \large Richmond, VA \quad | \quad Remote Available \quad | \quad 
+    \textbf{Open to relocation for the right opportunity} \\[6pt]
     (703) 638-2390 \quad | \quad 
-    \href{mailto:james.casebeer@gmail.com}{james.casebeer@gmail.com} \\[2pt]
+    \href{mailto:james.casebeer@gmail.com}{james.casebeer@gmail.com} \\[4pt]
     \href{https://www.linkedin.com/in/james-casebeer-b64b4813b/}{LinkedIn} 
     \quad | \quad 
     \href{https://github.com/jcasebeer}{GitHub}
 \end{center}
 
-\vspace{10pt}
+\vspace{15pt}
 
-% Professional Summary
 \section{Professional Summary}
-Results-driven C++ developer with \textbf{8 years} of professional experience building and optimizing high-throughput system software for document delivery solutions integrating with fax and print devices. Specialized in low-level systems programming, performance optimization, and hardware integration. Independently developed a modern 3D game engine featuring OpenGL rendering, multithreading, physically based rendering (PBR), and high-refresh-rate support, along with efficient C-based tools for texture and data optimization. Seeking roles in low-level systems programming or game engine development.
+Results-driven C++ developer with \textbf{8 years} of professional experience building and optimizing high-throughput system software for document delivery solutions integrating with fax and print devices. Specialized in low-level systems programming, performance optimization, and hardware integration. Independently developed a modern 3D game engine featuring OpenGL rendering, multithreading, physically based rendering (PBR), and high-refresh-rate support, along with efficient C-based tools for texture optimization. Seeking roles in low-level systems programming or game engine development.
 
 \section{Professional Experience}
 
 \entry{Lead Product Developer (Senior Software Developer equivalent)}{STR Software, Richmond, VA}{2021 -- Present}{}
-\begin{itemize}[leftmargin=*, nosep]
-    \bulletitem{Designed, developed, and maintained core C/C++ system software for high-volume document delivery platforms, integrating with fax and print devices in enterprise ERP environments (Oracle, SAP, etc.).}
-    \bulletitem{Optimized throughput and reliability of document processing pipelines to support large-scale production workloads.}
-    \bulletitem{Provided technical leadership for feature development, enhancing integration stability and overall system performance.}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item Designed, developed, and maintained core C/C++ system software for high-volume document delivery platforms, integrating with fax and print devices in enterprise ERP environments (Oracle, SAP, etc.).
+    \item Optimized throughput and reliability of document processing pipelines to support large-scale production workloads.
+    \item Provided technical leadership for feature development, enhancing integration stability and overall system performance.
 \end{itemize}
 
-\vspace{6pt}
+\vspace{8pt}
 
 \entry{Jr Software Developer}{STR Software, Richmond, VA}{2017 -- 2021}{}
-\begin{itemize}[leftmargin=*, nosep]
-    \bulletitem{Developed and maintained C/C++ components for seamless ERP-to-hardware integration, focusing on high-throughput data handling and device communication.}
-    \bulletitem{Contributed to debugging, performance tuning, and feature enhancements for mission-critical print/fax delivery solutions.}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item Developed and maintained C/C++ components for seamless ERP-to-hardware integration, focusing on high-throughput data handling and device communication.
+    \item Contributed to debugging, performance tuning, and feature enhancements for mission-critical print/fax delivery solutions.
 \end{itemize}
 
 \section{Selected Projects}
 
 \entry{Gunswinger -- 3D Game \& Custom Game Engine}{Personal Project -- C++}{}{}
-\begin{itemize}[leftmargin=*, nosep]
-    \bulletitem{Independently designed and implemented a complete 3D game engine and game from scratch in modern C++.}
-    \bulletitem{Built rendering pipeline using \textbf{OpenGL} with \textbf{GLFW} for window and input management; integrated \textbf{miniaudio} for audio playback.}
-    \bulletitem{Implemented physically based material workflow, multithreaded procedural mesh generation, and optimizations for high-frequency monitors (120Hz+).}
-    \bulletitem{Codebase available upon request (private repository).}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item Independently designed and implemented a complete 3D game engine and game from scratch in modern C++.
+    \item Built rendering pipeline using \textbf{OpenGL} with \textbf{GLFW} for window and input management; integrated \textbf{miniaudio} for audio playback.
+    \item Implemented physically based material workflow, multithreaded procedural mesh generation, and optimizations for high-frequency monitors (120Hz+).
+    \item Codebase available upon request (private repository).
 \end{itemize}
 
-\vspace{6pt}
+\vspace{8pt}
 
 \entry{CGOL -- Life-like Cellular Automata Simulator}{Personal Project -- C}{}{\href{https://github.com/jcasebeer/cgol}{github.com/jcasebeer/cgol}}
-\begin{itemize}[leftmargin=*, nosep]
-    \bulletitem{Developed a terminal-based Conway's Game of Life simulator in C that supports arbitrary rulesets in Golly notation.}
-    \bulletitem{Implemented efficient grid management, command-line options, and real-time simulation for custom cellular automata rules.}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item Developed a terminal-based Conway's Game of Life simulator in C that supports arbitrary rulesets in Golly notation.
+    \item Implemented efficient grid management, command-line options, and real-time simulation for custom cellular automata rules.
 \end{itemize}
 
-\vspace{6pt}
+\vspace{8pt}
 
 \entry{Low-Level C Projects}{github.com/jcasebeer}{Personal Projects -- C}{}
-\begin{itemize}[leftmargin=*, nosep]
-    \bulletitem{\textbf{packer}: Tool that packs separate PBR material textures (albedo, roughness, metallic, etc.) into two combined textures to reduce texture memory usage and binding overhead in rendering systems.}
-    \bulletitem{\textbf{pixel}: Minimal fullscreen buffer blitting example using GLFW, demonstrating low-level graphics and window management.}
-    \bulletitem{\textbf{radix\_sort}: High-performance LSD radix sort implementation.}
-    \bulletitem{\textbf{hash}: Collection of custom hash table implementations.}
-    \bulletitem{\textbf{marray}: Dynamic array macros for efficient memory management in C.}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item \textbf{packer}: Tool that packs separate PBR material textures (albedo, roughness, metallic, etc.) into two combined textures to reduce texture memory usage and binding overhead in rendering systems.
+    \item \textbf{pixel}: Minimal fullscreen buffer blitting example using GLFW, demonstrating low-level graphics and window management.
+    \item \textbf{radix\_sort}: High-performance LSD radix sort implementation.
+    \item \textbf{hash}: Collection of custom hash table implementations.
+    \item \textbf{marray}: Dynamic array macros for efficient memory management in C.
 \end{itemize}
 
 \section{Education}
