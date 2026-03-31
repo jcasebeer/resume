@@ -1,104 +1,147 @@
-\documentclass[11pt,a4paper]{article}
-\usepackage[margin=0.8in]{geometry}
+%----------------------------------------------------------------------------------------
+% James Casebeer — Resume
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, letterpaper]{article}
+
+% ---------- packages ----------
+\usepackage[margin=0.75in, top=0.65in, bottom=0.65in]{geometry}
 \usepackage{hyperref}
-\usepackage{fontspec}
 \usepackage{enumitem}
 \usepackage{titlesec}
+\usepackage{parskip}
+
+\usepackage{fontspec}
 \usepackage{xcolor}
 
-\setmainfont{Lato}   % Change to Arial or TeX Gyre Heros if Lato is not installed
+% ---------- colours ----------
+\definecolor{accent}{HTML}{2E4057}
 
-\definecolor{accent}{HTML}{2C3E50}
-\definecolor{linkcolor}{HTML}{2980B9}
-
+% ---------- hyperlink style ----------
 \hypersetup{
     colorlinks=true,
-    linkcolor=linkcolor,
-    urlcolor=linkcolor,
-    pdfborder={0 0 0}
+    urlcolor=accent,
+    linkcolor=accent
 }
 
-\titleformat{\section}{\Large\bfseries\color{accent}}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{12pt}{8pt}
+% ---------- section formatting ----------
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0em}{}
+  [\color{accent}\titlerule]
 
-\newcommand{\entry}[4]{
-    \textbf{#1} \hfill #2 \\
-    \textit{#3} \hfill #4 \\
-    \vspace{4pt}
-}
+\titlespacing{\section}{0pt}{10pt}{4pt}
 
+% ---------- list settings ----------
+\setlist[itemize]{leftmargin=1.5em, itemsep=1pt, topsep=2pt, parsep=0pt}
+
+%----------------------------------------------------------------------------------------
 \begin{document}
+\pagestyle{empty}
 
-% Header
+%----------------------------------------------------------------------------------------
+%   HEADER
+%----------------------------------------------------------------------------------------
 \begin{center}
-    {\Huge\bfseries James Casebeer} \\[6pt]
-    \large Richmond, VA \quad | \quad Remote Available \quad | \quad 
-    \textbf{Open to relocation for the right opportunity} \\[6pt]
-    (703) 638-2390 \quad | \quad 
-    \href{mailto:james.casebeer@gmail.com}{james.casebeer@gmail.com} \\[4pt]
-    \href{https://www.linkedin.com/in/james-casebeer-b64b4813b/}{LinkedIn} 
-    \quad | \quad 
-    \href{https://github.com/jcasebeer}{GitHub}
+  {\LARGE\bfseries James Casebeer}\\[4pt]
+  Richmond, VA \quad\textbar\quad Remote Available \quad\textbar\quad Open to relocation for the right opportunity\\[3pt]
+  (703) 638-2390 \quad\textbar\quad
+  \href{mailto:james.casebeer@gmail.com}{james.casebeer@gmail.com} \quad\textbar\quad
+  \href{https://www.linkedin.com/in/james-casebeer-b64b4813b/}{LinkedIn} \quad\textbar\quad
+  \href{https://github.com/jcasebeer}{GitHub}
 \end{center}
 
-\vspace{15pt}
-
+%----------------------------------------------------------------------------------------
+%   PROFESSIONAL SUMMARY
+%----------------------------------------------------------------------------------------
 \section{Professional Summary}
-Results-driven C++ developer with \textbf{8 years} of professional experience building and optimizing high-throughput system software for document delivery solutions integrating with fax and print devices. Specialized in low-level systems programming, performance optimization, and hardware integration. Independently developed a modern 3D game engine featuring OpenGL rendering, multithreading, physically based rendering (PBR), and high-refresh-rate support, along with efficient C-based tools for texture optimization. Seeking roles in low-level systems programming or game engine development.
 
+C/C++ systems developer with 8 years of professional experience building and maintaining high-throughput, mission-critical software for enterprise document delivery platforms. Led a small development team and drove technical direction for on-premises software deployed across large enterprise ERP environments. Independently designed and built a 3D game engine from scratch in C++, featuring a physically based rendering pipeline, shadow mapping, an entity-component system, custom memory allocators, and multithreaded procedural mesh generation. Equally comfortable at the systems and graphics layers --- seeking a role where low-level performance and code quality matter.
+
+%----------------------------------------------------------------------------------------
+%   PROFESSIONAL EXPERIENCE
+%----------------------------------------------------------------------------------------
 \section{Professional Experience}
 
-\entry{Lead Product Developer (Senior Software Developer equivalent)}{STR Software, Richmond, VA}{2021 -- Present}{}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-    \item Designed, developed, and maintained core C/C++ system software for high-volume document delivery platforms, integrating with fax and print devices in enterprise ERP environments (Oracle, SAP, etc.).
-    \item Optimized throughput and reliability of document processing pipelines to support large-scale production workloads.
-    \item Provided technical leadership for feature development, enhancing integration stability and overall system performance.
+\noindent\textbf{Lead Product Developer} \hfill \textit{2021 -- Present}\\
+\textit{STR Software --- Richmond, VA}\\[4pt]
+\begin{itemize}
+  \item Led development and long-term technical direction of core C/C++ software for an on-premises enterprise document delivery platform, deployed at customer sites processing \textbf{10,000+ documents per day}.
+  \item Managed and mentored junior developers, conducting code reviews and providing technical guidance across the team.
+  \item Drove architectural decisions to improve integration stability and throughput across ERP environments including Oracle and SAP.
+  \item Sole developer on a port of the Linux build from 32-bit to 64-bit, requiring significant rework of platform assumptions baked into the original design while maintaining compatibility across Solaris, AIX, and HPUX.
+  \item Owned feature development end-to-end, from design through deployment, for mission-critical print, fax, and email delivery systems.
 \end{itemize}
 
-\vspace{8pt}
+\vspace{6pt}
 
-\entry{Jr Software Developer}{STR Software, Richmond, VA}{2017 -- 2021}{}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-    \item Developed and maintained C/C++ components for seamless ERP-to-hardware integration, focusing on high-throughput data handling and device communication.
-    \item Contributed to debugging, performance tuning, and feature enhancements for mission-critical print/fax delivery solutions.
+\noindent\textbf{Junior Software Developer} \hfill \textit{2017 -- 2021}\\
+\textit{STR Software --- Richmond, VA}\\[4pt]
+\begin{itemize}
+  \item Developed and maintained C/C++ components for ERP-to-hardware integration, focusing on high-throughput data handling and device communication across print, fax, and email delivery systems.
+  \item Worked extensively with Unix system APIs including fork, select, and FIFO-based IPC for inter-process communication across the document delivery pipeline.
+  \item Contributed to performance tuning, debugging, and feature work on a production codebase serving enterprise customers.
 \end{itemize}
 
+%----------------------------------------------------------------------------------------
+%   SELECTED PROJECTS
+%----------------------------------------------------------------------------------------
 \section{Selected Projects}
 
-\entry{Gunswinger -- 3D Game \& Custom Game Engine}{Personal Project -- C++}{}{}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-    \item Independently designed and implemented a complete 3D game engine and game from scratch in C++.
-    \item Built rendering pipeline using \textbf{OpenGL} with \textbf{GLFW} for window and input management; integrated \textbf{miniaudio} for audio playback.
-    \item Implemented physically based material workflow, multithreaded procedural mesh generation, and optimizations for high-frequency monitors (120Hz+).
-    \item Codebase available upon request (private repository).
+\noindent\textbf{Gunswinger --- 3D Game Engine \& Game} \hfill \textit{Personal Project --- C++}\\
+\textit{\textasciitilde20,000 lines \quad\textbar\quad Private repository, available on request}\\[4pt]
+\begin{itemize}
+  \item Designed and built a complete 3D game engine and game from scratch in C++.
+  \item Implemented a physically based rendering (PBR) pipeline in OpenGL with custom GLSL shaders, including shadow mapping, normal mapping, and material workflows.
+  \item Built an entity-component system (ECS) for decoupled, composable scene management.
+  \item Wrote custom memory allocators to minimize heap fragmentation and improve cache performance in hot paths.
+  \item Implemented multithreaded procedural mesh generation with optimizations targeting high-refresh-rate displays (120Hz+).
+  \item Integrated GLFW for window/input management and miniaudio for audio playback.
 \end{itemize}
 
-\vspace{8pt}
+\vspace{6pt}
 
-\entry{CGOL -- Life-like Cellular Automata Simulator}{Personal Project -- C}{}{\href{https://github.com/jcasebeer/cgol}{github.com/jcasebeer/cgol}}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-    \item Developed a terminal-based Conway's Game of Life simulator in C that supports arbitrary rulesets in Golly notation.
-    \item Implemented efficient grid management, command-line options, and real-time simulation for custom cellular automata rules.
+\noindent\textbf{CGOL --- Cellular Automata Simulator} \hfill \textit{Personal Project --- C}\\
+\href{https://github.com/jcasebeer/cgol}{\small\texttt{github.com/jcasebeer/cgol}}\\[4pt]
+\begin{itemize}
+  \item Built a terminal-based Conway's Game of Life simulator supporting arbitrary rulesets in Golly notation.
+  \item Implemented a fixed 2D grid, real-time simulation, and a flexible command-line interface for custom cellular automata rules.
 \end{itemize}
 
-\vspace{8pt}
+\vspace{6pt}
 
-\entry{Low-Level C Projects}{github.com/jcasebeer}{Personal Projects -- C}{}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-    \item \textbf{packer}: Tool that packs separate PBR material textures (albedo, roughness, metallic, etc.) into two combined textures to reduce texture memory usage and binding overhead in rendering systems.
-    \item \textbf{pixel}: Minimal fullscreen buffer blitting example using GLFW, demonstrating low-level graphics and window management.
-    \item \textbf{radix\_sort}: High-performance LSD radix sort implementation.
-    \item \textbf{hash}: Collection of custom hash table implementations.
-    \item \textbf{marray}: Dynamic array macros for efficient memory management in C.
+\noindent\textbf{Low-Level C Utilities} \hfill \textit{Personal Projects --- C}\\
+\href{https://github.com/jcasebeer}{\small\texttt{github.com/jcasebeer}}\\[4pt]
+\begin{itemize}
+  \item \textbf{packer} --- Packs separate PBR textures (albedo, roughness, metallic) into combined textures, reducing memory usage and binding overhead in rendering systems.
+  \item \textbf{radix\_sort} --- LSD radix sort implementation.
+  \item \textbf{hash} --- Collection of custom hash table implementations.
+  \item \textbf{marray} --- Dynamic array macros for efficient memory management in C.
 \end{itemize}
 
+%----------------------------------------------------------------------------------------
+%   EDUCATION
+%----------------------------------------------------------------------------------------
 \section{Education}
-\entry{Bachelor of Science in Computer Science}{George Mason University}{}{Graduated: 2017}
 
+\noindent\textbf{Bachelor of Science in Computer Science}\\
+George Mason University \hfill \textit{Graduated 2017}
+
+%----------------------------------------------------------------------------------------
+%   SKILLS
+%----------------------------------------------------------------------------------------
 \section{Skills}
-\textbf{Languages:} C, C++ (C++17/20), Java, Python \\
-\textbf{Graphics \& Audio:} OpenGL, GLFW, miniaudio, ImGui \\
-\textbf{Tools \& Technologies:} CMake, GCC/Clang, Make, GDB, Visual Studio, SQLite, stb\_image \\
-\textbf{Other:} Multithreading, Performance Optimization, Low-Level Systems Programming, Texture Packing / Channel Packing, Data Structures \& Algorithms, Physically Based Rendering, Procedural Generation, Git
+
+\noindent
+\begin{tabular}{@{} l l}
+  \textbf{Languages}         & C, C++ (C++17/20), Java, Python \\[3pt]
+  \textbf{Graphics \& Audio} & OpenGL, GLSL, GLFW, miniaudio, ImGui \\[3pt]
+  \textbf{Rendering}         & Physically Based Rendering, Shadow Mapping, Texture/Channel Packing \\[3pt]
+  \textbf{Systems}           & Multithreading, Custom Memory Allocators, Performance Optimization, \\
+                             & Data Structures \& Algorithms, Unix IPC (fork, select, FIFO) \\[3pt]
+  \textbf{Platforms}         & Linux (RHEL, Alpine), Solaris, AIX, HPUX \\[3pt]
+  \textbf{Tools}             & CMake, GCC/Clang, GDB, Make, Visual Studio, Git, SQLite, stb\_image \\[3pt]
+  \textbf{Other}             & ECS Architecture, Procedural Generation, ERP Integration (Oracle, SAP) \\
+\end{tabular}
 
 \end{document}
